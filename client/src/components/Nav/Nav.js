@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation , useRouteMatch} from "react-router-dom";
 
 function Nav(props) {
   const location = useLocation();
-  console.log(location)
+  const match= useRouteMatch();
+  console.log(location);
   useEffect(() => {
     
   },[]);
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#">
         {/* how do I make this dynamic? */}
-        About me
+       {location.pathname.slice(1)}
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -22,23 +23,23 @@ function Nav(props) {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">
-              {props.aboutMe} <span class="sr-only"></span>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="/Home">
+              Home <span className="sr-only"></span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">
-              {props.contactMe}
+          {/* <li className="nav-item">
+            <a className="nav-link" href="contact.html">
+              contact me
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">
-              {props.portfolio}
+          </li> */}
+          <li className="nav-item">
+            <a className="nav-link" href="Projects">
+              portfolio
             </a>
           </li>
         </ul>

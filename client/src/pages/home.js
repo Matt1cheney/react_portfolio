@@ -1,9 +1,11 @@
 import React from 'react';
+import Footer from '../components/Footer/Footer';
 
 function Home() {
 
   return (
-    <div className="container-fluid bg-light mb-0 ">
+    <>
+    <div id="parent" className="container-fluid bg-light mb-0 ">
       <div className="row">
         <div className="col-md-12">
           {/* header */}
@@ -14,13 +16,13 @@ function Home() {
           <a href="https://www.github.com/Matt1cheney" target="_blank">
             <i className=" fab fa-github-square" style={{color: "#5b5d64"}}></i>
           </a>
-          <a href="https://www.slideshare.net/slideshow/embed_code/key/Epg3Re0YQmNt66" target="_blank">
+          <a href="./resume/Matthew-Cheney.pdf" target="_blank">
             <i className=" far fa-file-pdf" style={{color: "#b12116"}}></i>
           </a>
           <p className="fontText lead"style ={{fontFamily: 'Noto Serif KR'}}>
             I am currently looking forward to a career in Back-end Development!
-          <hr className="my-4" />
           </p>
+          <hr className="my-4" />
         </div>
       </div>
       {/* about me and text row */}
@@ -30,8 +32,8 @@ function Home() {
         <div className="mx-auto">
             {/* Portrait */}
             <img
-              className="portrait"
-              src="images\portrait img.jpg"
+              id="portrait"
+              src="./images/portrait.jpg"
               className="img-fluid"
               alt="Responsive image"
             />
@@ -76,7 +78,9 @@ function Home() {
       </div>
 
       {/* body about me */}
+    <Footer/>
     </div>
+    </>
 )
 };
 
