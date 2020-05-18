@@ -10,10 +10,10 @@ function Nav(props) {
   },[]);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
+      <p className="navbar-brand">
         {/* how do I make this dynamic? */}
        {location.pathname.slice(1)}
-      </a>
+      </p>
       <button
         className="navbar-toggler"
         type="button"
@@ -28,9 +28,9 @@ function Nav(props) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="/Home">
+            <Link className="nav-link" to="/Home">
               Home <span className="sr-only"></span>
-            </a>
+            </Link>
           </li>
           {/* <li className="nav-item">
             <a className="nav-link" href="contact.html">
@@ -38,9 +38,9 @@ function Nav(props) {
             </a>
           </li> */}
           <li className="nav-item">
-            <a className="nav-link" href="Projects">
-              portfolio
-            </a>
+            <Link className="nav-link" to="/Projects">
+              Projects
+            </Link>
           </li>
         </ul>
       </div>
