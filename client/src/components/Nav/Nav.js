@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Nav() {
+  const location = useLocation();
   useEffect(() => {
     
   },[]);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <p className="navbar-brand">
+        {/* how do I make this dynamic? */}
        {location.pathname.slice(1)}
       </p>
       <button
