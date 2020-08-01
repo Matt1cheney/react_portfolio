@@ -16,7 +16,7 @@ function Home() {
           <a href="https://www.github.com/Matt1cheney" target="_blank">
             <i className=" fab fa-github-square" style={{color: "#5b5d64"}}></i>
           </a>
-          <a href="./resume/Matthew-Cheney.pdf" target="_blank">
+          <a href="./resume/updated_resume.pdf" target="_blank">
             <i className=" far fa-file-pdf" style={{color: "#b12116"}}></i>
           </a>
           <p className="fontText lead"style ={{fontFamily: 'Noto Serif KR'}}>
